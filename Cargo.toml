@@ -1,0 +1,11 @@
+[package]
+name = "rural_health_cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }   # For JSON serialization/deserialization
+serde_json = "1.0"                                   # For parsing JSON
+reqwest = { version = "0.11", features = ["blocking", "json"] } # Enable JSON feature for HTTP requests
+clap = { version = "4.0" }                           # Command-line argument parsing
+csv = "1.1"                                          # For managing CSV files
