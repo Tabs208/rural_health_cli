@@ -1,0 +1,37 @@
+name: Cross-Compile Rust CLI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    name: Build CLI for Multiple Platforms
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        platform: [x86_64-unknown-linux-gnu, x86_64-pc-windows-gnu, x86_64-apple-darwin]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          target: ${{ matrix.platform }}
+
+      - name: Build CLI
+        run: |
+          rustup target add ${{ matrix.platform }}
+          cargo build --release --target ${{ matrix.platform }}
+
+      - name: Upload Binaries
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.platform }}-binary
+          path: target/${{ matrix.platform }}/release/rural_health_cli
