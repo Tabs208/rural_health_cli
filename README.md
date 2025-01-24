@@ -14,3 +14,5 @@ Health Education Resources
 Provides offline access to common health advice and tips for managing common diseases like malaria, cholera, etc.
 Supply Requests
 Automates the request process for essential medical supplies from regional centers.
+## Teleconsultation CLI Tool
+This tool simplifies teleconsultation for rural health workers. Learn more and download the tool on our [marketing website]https://tabs208.github.io/cli-marketing-website/
