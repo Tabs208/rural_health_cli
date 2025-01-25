@@ -14,4 +14,4 @@ Provides offline access to common health advice and tips for managing common dis
 # Supply Requests
 Automates the request process for essential medical supplies from regional centers.
 # Inconclusion
-This tool simplifies teleconsultation for rural health workers. Learn more and download the tool on our [marketing website]https://tabs208.github.io/cli-marketing-website/
+This tool simplifies teleconsultation for rural health workers. Learn more and download the tool on our [marketing website]https://github.com/Tabs208/marketing-website-RuralHealth-CLI-Tool.git
